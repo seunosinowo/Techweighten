@@ -56,6 +56,17 @@ const projects = [
       'Responsive design and fast navigation to boost engagement',
     ],
   },
+  {
+    title: 'Eco Darlin Ltd',
+    image: '/assets/Eco.jpg',
+    url: '#',
+    stack: ['Brand', 'Website', 'Responsive UI'],
+    bullets: [
+      'Informational site championing eco conservation and bio preservation',
+      'Clean visual identity and accessible content structure',
+      'Mobile‑first layout guiding visitors to contact and engagement',
+    ],
+  },
 ];
 
 const Projects = () => {

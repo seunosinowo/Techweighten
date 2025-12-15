@@ -20,8 +20,11 @@ const Navbar = () => {
       <nav className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center">
+          <NavLink to="/" className="flex items-center gap-3">
             <img src="/assets/techweighten-logo.png" alt="TechWeighten Logo" className="h-10 md:h-12 w-auto" />
+            <span className="text-lg md:text-2xl font-bold tracking-tight text-foreground">
+              TechWeighten
+            </span>
           </NavLink>
 
           {/* Desktop Navigation */}

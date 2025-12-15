@@ -67,7 +67,31 @@ const Services = () => {
           </p>
         </div>
 
-        
+        <div className="relative mb-16">
+          <div className="absolute -inset-6 bg-gradient-to-r from-primary/15 to-accent/15 rounded-[3rem] blur-2xl opacity-60" />
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <img
+              src="/assets/ser1.jpg"
+              alt="Service visual 1"
+              className="h-36 md:h-48 w-full object-cover rounded-3xl shadow-xl"
+            />
+            <img
+              src="/assets/ser2.jpg"
+              alt="Service visual 2"
+              className="h-36 md:h-48 w-full object-cover rounded-3xl shadow-xl"
+            />
+            <img
+              src="/assets/ser3.jpg"
+              alt="Service visual 3"
+              className="h-36 md:h-48 w-full object-cover rounded-3xl shadow-xl"
+            />
+            <img
+              src="/assets/ser4.jpg"
+              alt="Service visual 4"
+              className="h-36 md:h-48 w-full object-cover rounded-3xl shadow-xl"
+            />
+          </div>
+        </div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

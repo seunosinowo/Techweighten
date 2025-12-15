@@ -26,7 +26,7 @@ Install and run:
 npm install
 npm run dev
 ```
-The dev server runs on `http://localhost:8080` (configured in `vite.config.ts`).
+The dev server runs on `http://localhost:5173` (configured in `vite.config.ts`).
 
 Build and preview:
 ```sh

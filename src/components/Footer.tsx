@@ -1,4 +1,3 @@
-import logo from '@/assets/techweighten-logo.jpeg';
 import { NavLink } from '@/components/NavLink';
 
 const Footer = () => {
@@ -8,7 +7,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo & Description */}
           <div className="lg:col-span-2">
-            <img src={logo} alt="TechWeighten Logo" className="h-12 w-auto mb-6" />
+            <img src="/assets/techweighten-logo.png" alt="TechWeighten Logo" className="h-12 w-auto mb-6" />
             <p className="text-primary-foreground/70 max-w-md mb-6">
               TechWeighten is a forward-thinking technology solutions company dedicated to helping businesses work smarter, faster, and more securely.
             </p>

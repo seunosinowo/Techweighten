@@ -1,5 +1,4 @@
 import { Target, Eye, Lightbulb, Users } from 'lucide-react';
-import teamImage from '@/assets/team-collab.jpg';
 
 const values = [
   {
@@ -48,7 +47,7 @@ const About = () => {
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-2xl opacity-50" />
             <img 
-              src={teamImage} 
+              src="/assets/team-collab.jpg" 
               alt="TechWeighten team collaborating" 
               className="relative w-full rounded-2xl shadow-2xl"
             />

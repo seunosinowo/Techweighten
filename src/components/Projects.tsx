@@ -34,6 +34,28 @@ const projects = [
       'Achieved 98% success rate across onboarding and certification workflows',
     ],
   },
+  {
+    title: 'H&O Movers – Moving & Logistics Website',
+    image: '/movers.JPG',
+    url: 'https://www.handomovers.com/',
+    stack: ['Next.js', 'Tailwind', 'Node.js'],
+    bullets: [
+      'Customer-first moving platform focused on speed, safety, and reliability',
+      'Streamlined booking and quote flow with mobile-friendly experience',
+      'Clear service presentation and trust signals built into every page',
+    ],
+  },
+  {
+    title: 'Beauty Stars – Cosmetics Brand Website',
+    image: '/beauty.JPG',
+    url: 'https://beautystarscosmetics.com/',
+    stack: ['Next.js', 'Tailwind', 'Node.js'],
+    bullets: [
+      'Skincare product showcase with conversion-focused landing pages',
+      'Clear product information highlighting bio‑active formulations and benefits',
+      'Responsive design and fast navigation to boost engagement',
+    ],
+  },
 ];
 
 const Projects = () => {
@@ -62,7 +84,7 @@ const Projects = () => {
                 <img
                   src={p.image}
                   alt={p.title}
-                  className="w-full h-64 md:h-72 object-cover rounded-2xl border border-border shadow-md"
+                  className="mx-auto max-w-full h-auto max-h-80 md:max-h-96 object-contain bg-muted rounded-2xl border border-border shadow-md"
                 />
               </div>
               <div className={i % 2 === 1 ? 'md:order-1' : ''}>

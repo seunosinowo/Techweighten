@@ -1,7 +1,6 @@
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { NavLink } from '@/components/NavLink';
-import heroBg from '@/assets/hero-bg.jpg';
 
 const Hero = () => {
   return (
@@ -12,7 +11,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroBg}
+          src="/assets/hero-bg.jpg"
           alt="Technology background"
           className="w-full h-full object-cover"
         />

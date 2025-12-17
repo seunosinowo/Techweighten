@@ -1,4 +1,5 @@
 import { NavLink } from '@/components/NavLink';
+import { Facebook, Twitter, Instagram, Linkedin, Github, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,6 +12,29 @@ const Footer = () => {
             <p className="text-primary-foreground/70 max-w-md mb-6">
               TechWeighten is a forward-thinking technology solutions company dedicated to helping businesses work smarter, faster, and more securely.
             </p>
+            <div className="mb-6">
+              <h4 className="font-semibold text-lg mb-3">Follow Us</h4>
+              <div className="flex flex-wrap items-center gap-4">
+                <a href="https://facebook.com/TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  <Facebook className="h-6 w-6" />
+                </a>
+                <a href="https://twitter.com/TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="Open X (Twitter)" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  <Twitter className="h-6 w-6" />
+                </a>
+                <a href="https://instagram.com/TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  <Instagram className="h-6 w-6" />
+                </a>
+                <a href="https://linkedin.com/company/TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  <Linkedin className="h-6 w-6" />
+                </a>
+                <a href="https://github.com/TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  <Github className="h-6 w-6" />
+                </a>
+                <a href="https://youtube.com/@TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  <Youtube className="h-6 w-6" />
+                </a>
+              </div>
+            </div>
             <p className="text-primary-foreground/50 text-sm">
               © {new Date().getFullYear()} TechWeighten Technologies. All rights reserved.
             </p>

@@ -14,11 +14,11 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [api]);
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden pt-20">
+    <section id="home" className="relative min-h-screen overflow-hidden">
       <Carousel opts={{ loop: true }} setApi={setApi} className="relative">
         <CarouselContent>
           <CarouselItem>
-            <div className="relative min-h-[calc(100vh-5rem)] flex items-center">
+            <div className="relative min-h-screen flex items-center">
               <img src="/assets/hero-bg.jpg" alt="Technology background" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-navy/70" />
               <div className="container-custom relative z-10 py-20">
@@ -45,7 +45,7 @@ const Hero = () => {
             </div>
           </CarouselItem>
           <CarouselItem>
-            <div className="relative min-h-[calc(100vh-5rem)] flex items-center">
+            <div className="relative min-h-screen flex items-center">
               <img src="/assets/team-collab.jpg" alt="Team collaboration" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-navy/70" />
               <div className="container-custom relative z-10 py-20">
@@ -73,7 +73,7 @@ const Hero = () => {
             </div>
           </CarouselItem>
           <CarouselItem>
-            <div className="relative min-h-[calc(100vh-5rem)] flex items-center">
+            <div className="relative min-h-screen flex items-center">
               <img src="/assets/server-room.jpg" alt="Reliable infrastructure" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-navy/70" />
               <div className="container-custom relative z-10 py-20">

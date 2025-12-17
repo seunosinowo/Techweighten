@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone, Facebook, Twitter, Instagram, Linkedin, Github, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { NavLink } from '@/components/NavLink';
 
@@ -16,7 +16,37 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+      <div className="hidden lg:block bg-navy text-primary-foreground">
+        <div className="container-custom">
+          <div className="flex items-center justify-between h-10">
+            <a href="tel:+2347077323600" className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors text-sm">
+              <Phone className="h-4 w-4" />
+              +234 707 732 3600
+            </a>
+            <div className="flex items-center gap-4">
+              <a href="https://facebook.com/TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="https://x.com/techweighten" target="_blank" rel="noopener noreferrer" aria-label="Open X (Twitter)" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="https://instagram.com/techweighten" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="https://linkedin.com/company/TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="https://github.com/TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                <Github className="h-5 w-5" />
+              </a>
+              <a href="https://youtube.com/@TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                <Youtube className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <nav className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}

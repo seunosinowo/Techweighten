@@ -9,48 +9,54 @@ const slides = [
     img: '/new/5.jpg',
     alt: 'Technology background',
     title: 'Empowering Businesses with Technology',
-    description: 'Your business is our business. We deliver innovative IT solutions tailored to your operational, technical, and business goals.',
+    // description: 'Your business is our business. We deliver innovative IT solutions tailored to your operational, technical, and business goals.',
+    descriptionClass: 'text-white',
     buttons: [
       { text: 'Start Your Project', variant: 'accent', to: '/contact' },
-      { text: 'Explore Services', variant: 'hero-outline', to: '/services' },
+      { text: 'Explore Services', variant: 'hero', to: '/services' },
     ],
   },
   {
     img: '/new/tg.jpg',
     alt: 'Team collaboration',
     title: 'What Makes Us Different',
-    description: 'We combine strategy, engineering, and support to build resilient digital operations.',
+    // description: 'We combine strategy, engineering, and support to build resilient digital operations.',
+    descriptionClass: 'text-accent',
     features: ['Tailored solutions for specific goals', 'Modern tools and best practices', 'Partnership and long-term support'],
   },
   {
     img: '/new/yy.jpg',
     alt: 'Reliable infrastructure',
     title: 'We Ensure 99% Uptime',
-    description: 'Performance, reliability, and proactive monitoring to keep your business online.',
+    // description: 'Performance, reliability, and proactive monitoring to keep your business online.',
+    descriptionClass: 'text-amber-200',
     highlight: '99% Uptime',
   },
   {
     img: '/new/9uj.jpg',
     alt: 'Innovative technology',
     title: 'Driving Innovation with Cutting-Edge Tech',
-    description: 'Stay ahead of the curve with our latest technological advancements and innovative solutions.',
+    // description: 'Stay ahead of the curve with our latest technological advancements and innovative solutions.',
+    descriptionClass: 'text-primary-foreground/90',
     buttons: [
       { text: 'Get Started', variant: 'accent', to: '/contact' },
-      { text: 'Our Innovations', variant: 'hero-outline', to: '/services' },
+      { text: 'Our Innovations', variant: 'hero', to: '/services' },
     ],
   },
   {
     img: '/new/68.jpg',
     alt: 'Expert team',
     title: 'Meet Our Expert Team',
-    description: 'Our skilled professionals bring years of experience and expertise to deliver exceptional results.',
+    // description: 'Our skilled professionals bring years of experience and expertise to deliver exceptional results.',
+    descriptionClass: 'text-orange-400',
     features: ['Certified Specialists', 'Years of Experience', 'Client-Focused Approach'],
   },
   {
     img: '/new/90.jpg',
     alt: 'Reliable support',
     title: '24/7 Support You Can Count On',
-    description: 'Round-the-clock assistance and maintenance to ensure your systems run smoothly at all times.',
+    // description: 'Round-the-clock assistance and maintenance to ensure your systems run smoothly at all times.',
+    descriptionClass: 'text-sky-200',
     highlight: '24/7 Available',
   },
 ];
@@ -71,8 +77,8 @@ const Hero = () => {
           {slides.map((slide, index) => (
             <CarouselItem key={index}>
               <div className="relative min-h-screen flex items-center">
-                <img src={slide.img} alt={slide.alt} className="absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-navy/70" />
+                <img src={slide.img} alt={slide.alt} className="absolute inset-0 w-full h-full object-cover object-top" />
+                <div className="absolute inset-0 bg-primary/20" />
                 <div className="container-custom relative z-10 py-20">
                   <div className="max-w-3xl mx-auto text-center">
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
@@ -84,8 +90,12 @@ const Hero = () => {
                         slide.title
                       )}
                     </h1>
-                    <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-                      {slide.description}
+                    <p
+                      className={`text-xl md:text-2xl mb-8 max-w-2xl mx-auto font-semibold ${
+                        slide.descriptionClass ?? 'text-accent'
+                      }`}
+                    >
+                      {/* {slide.description} */}
                     </p>
                     {slide.buttons && (
                       <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -103,35 +103,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Values Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {values.map((value, index) => (
-            <div
-              key={value.title}
-              className="bg-card rounded-xl p-6 border border-border card-hover text-center"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <value.icon className="text-primary" size={24} />
-              </div>
-              <h4 className="text-lg font-semibold text-foreground mb-2">{value.title}</h4>
-              <p className="text-muted-foreground text-sm">{value.description}</p>
-            </div>
-          ))}
-        </div>
 
-        {/* Gallery */}
-        <div className="mt-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">Our Work Gallery</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <img src="/new/5.jpg" alt="Gallery image 1" className="w-full h-48 object-cover rounded-lg shadow-lg" />
-            <img src="/new/9uj.jpg" alt="Gallery image 2" className="w-full h-48 object-cover rounded-lg shadow-lg" />
-            <img src="/new/yy.jpg" alt="Gallery image 3" className="w-full h-48 object-cover rounded-lg shadow-lg" />
-            <img src="/new/o.jpg" alt="Gallery image 4" className="w-full h-48 object-cover rounded-lg shadow-lg" />
-            <img src="/new/68.jpg" alt="Gallery image 5" className="w-full h-48 object-cover rounded-lg shadow-lg" />
-            <img src="/new/3ed.jpg" alt="Gallery image 6" className="w-full h-48 object-cover rounded-lg shadow-lg" />
-          </div>
-        </div>
       </div>
       {/* hjk */}
     </section>

@@ -16,36 +16,48 @@ const services = [
     title: 'IT Infrastructure Setup',
     description: 'Server and network installation, router/switch/firewall setup, cloud-based system deployment, and email platform migration.',
     features: ['Network Configuration', 'Cloud Deployment', 'Security Setup'],
+    image: '/assets/ser1.jpg',
+    id: 'it-infrastructure-setup',
   },
   {
     icon: Monitor,
     title: 'Hardware & Equipment',
     description: 'Supply and configuration of laptops, desktops, printers, CCTV systems, access control, and time & attendance systems.',
     features: ['Device Supply', 'CCTV Installation', 'Access Control'],
+    image: '/assets/ser2.jpg',
+    id: 'hardware-equipment',
   },
   {
     icon: Code,
     title: 'Software Deployment',
     description: 'Installation and configuration of enterprise applications, custom software delivery, and licensing management.',
     features: ['App Integration', 'Custom Software', 'License Management'],
+    image: '/assets/ser3.jpg',
+    id: 'software-deployment',
   },
   {
     icon: Globe,
     title: 'Web & App Development',
     description: 'Corporate website design and hosting, web and mobile application development, UI/UX design and optimization.',
     features: ['Website Design', 'Mobile Apps', 'UI/UX Design'],
+    image: '/assets/ser4.jpg',
+    id: 'web-app-development',
   },
   {
     icon: Headphones,
     title: 'IT Support & Maintenance',
     description: 'Preventive and corrective maintenance, troubleshooting, system upgrades, remote and on-site support services.',
     features: ['24/7 Support', 'System Upgrades', 'Troubleshooting'],
+    image: '/assets/ser1.jpg',
+    id: 'it-support-maintenance',
   },
   {
     icon: ClipboardList,
     title: 'IT Consultancy',
     description: 'IT policy development, technology audit, risk assessment, strategic IT planning and digital transformation advisory.',
     features: ['Strategy Planning', 'Risk Assessment', 'Digital Transformation'],
+    image: '/assets/ser2.jpg',
+    id: 'it-consultancy',
   },
 ];
 
@@ -67,71 +79,48 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="relative mb-16">
-          <div className="absolute -inset-6 bg-gradient-to-r from-primary/15 to-accent/15 rounded-[3rem] blur-2xl opacity-60" />
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <img
-              src="/assets/ser1.jpg"
-              alt="Service visual 1"
-              className="h-36 md:h-48 w-full object-cover rounded-3xl shadow-xl"
-            />
-            <img
-              src="/assets/ser2.jpg"
-              alt="Service visual 2"
-              className="h-36 md:h-48 w-full object-cover rounded-3xl shadow-xl"
-            />
-            <img
-              src="/assets/ser3.jpg"
-              alt="Service visual 3"
-              className="h-36 md:h-48 w-full object-cover rounded-3xl shadow-xl"
-            />
-            <img
-              src="/assets/ser4.jpg"
-              alt="Service visual 4"
-              className="h-36 md:h-48 w-full object-cover rounded-3xl shadow-xl"
-            />
-          </div>
-        </div>
-
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group bg-card rounded-2xl p-8 border border-border card-hover relative overflow-hidden"
+              className="flex flex-col md:flex-row md:items-center md:gap-6 group bg-card rounded-2xl p-6 border border-border card-hover overflow-hidden"
             >
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-primary/10 group-hover:bg-primary flex items-center justify-center mb-6 transition-colors duration-300">
-                <service.icon className="text-primary group-hover:text-primary-foreground transition-colors duration-300" size={28} />
+              {/* Image */}
+              <div className="flex-shrink-0 w-full md:w-1/3 mb-4 md:mb-0">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="h-40 w-full object-cover rounded-xl group-hover:shadow-lg transition-shadow duration-300"
+                />
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
+              <div className="w-full md:w-2/3">
+                <h3 className="text-lg font-bold text-foreground mb-2">{service.title}</h3>
+                <p className="text-muted-foreground mb-4 leading-relaxed text-sm">{service.description}</p>
 
-              {/* Features */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {service.features.map((feature) => (
-                  <span
-                    key={feature}
-                    className="px-3 py-1 bg-secondary text-secondary-foreground text-xs font-medium rounded-full"
-                  >
-                    {feature}
-                  </span>
-                ))}
+                {/* Features */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {service.features.slice(0, 2).map((feature) => (
+                    <span
+                      key={feature}
+                      className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs font-medium rounded-full"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Link */}
+                <NavLink
+                  to={`/services/${service.id}`}
+                  className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all duration-200"
+                >
+                  Read More
+                  <ArrowRight size={16} />
+                </NavLink>
               </div>
-
-              {/* Link */}
-              <NavLink
-                to="/contact"
-                className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all duration-200"
-              >
-                Learn More
-                <ArrowRight size={16} />
-              </NavLink>
-
-              {/* Accent Border */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}
         </div>

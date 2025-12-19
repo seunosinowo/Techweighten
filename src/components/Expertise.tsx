@@ -1,4 +1,4 @@
-import { Building2, Factory, Droplets, Truck, ArrowRight } from 'lucide-react';
+import { Building2, Factory, Droplets, Truck, ArrowRight, Facebook, Twitter, Instagram, Linkedin, Github, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { NavLink } from '@/components/NavLink';
 
@@ -32,6 +32,28 @@ const Expertise = () => {
           <p className="text-primary-foreground/70 text-lg">
             We provide solutions for industries ranging from manufacturing to oil and gas, delivering tailored technology that drives results.
           </p>
+
+          {/* Social Media Links */}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <a href="https://facebook.com/TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-primary-foreground/70 hover:text-accent transition-colors">
+              <Facebook className="h-6 w-6" />
+            </a>
+            <a href="https://x.com/techweighten" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-primary-foreground/70 hover:text-accent transition-colors">
+              <Twitter className="h-6 w-6" />
+            </a>
+            <a href="https://instagram.com/techweighten" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-primary-foreground/70 hover:text-accent transition-colors">
+              <Instagram className="h-6 w-6" />
+            </a>
+            <a href="https://linkedin.com/company/TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-primary-foreground/70 hover:text-accent transition-colors">
+              <Linkedin className="h-6 w-6" />
+            </a>
+            <a href="https://github.com/TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-primary-foreground/70 hover:text-accent transition-colors">
+              <Github className="h-6 w-6" />
+            </a>
+            <a href="https://youtube.com/@TechWeighten" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-primary-foreground/70 hover:text-accent transition-colors">
+              <Youtube className="h-6 w-6" />
+            </a>
+          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
